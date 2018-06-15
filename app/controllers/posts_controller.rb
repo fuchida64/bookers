@@ -8,9 +8,13 @@ class PostsController < ApplicationController
   end
 
   def create
-  	post = Post.new(post_params)
-  	post.save
-  	redirect_to post_path(post.id)
+    @posts = Post.all
+  	@post = Post.new(post_params)
+  	if @post.save
+  	 redirect_to post_path(@post.id)
+    else
+      render 'index'
+    end
   end
 
   def show
