@@ -21,29 +21,58 @@
 a {
     color: #000;
 }
-
 body {
+    background-color: #fff;
     color: #333;
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 13px;
     line-height: 18px;
     margin: 33px;
 }
-
-h1 {
+h1, h2 {
     display: block;
     font-weight: bold;
+    margin: 10px 0;
 }
-
 strong {
     font-weight: bold;
 }
-p, td {
+p, ol, ul, td {
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 13px;
     line-height: 18px;
     margin: 33px;
 }
-
-
-
+#notice {
+    color: green;
+}
+th {
+    padding-bottom: 5px;
+}
+td {
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+h4 {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.book_title, .book_body {
+    display: block;
+}
+.bottun {
+    margin-top: 10px;
+}
+.box {
+    display: block;
+}
+.edit_2, .line, .back, .show_2 {
+    display: inline-block;
+    margin: 0 1px;
+    margin-top: 10px;
+}
+.edit_text {
+    margin: 15px 0 0 0;
+}

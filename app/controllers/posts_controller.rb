@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def top
   end
 
@@ -12,7 +13,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "Book was successfully created."
-      redirect_to post_path(@post.id)
+      redirect_to show_post_path(@post.id)
     else
       render 'index'
     end
@@ -29,8 +30,8 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      flash[:notice] = "Book was successfully created."
-      redirect_to post_path(@post.id)
+      flash[:notice] = "Book was successfully updated."
+      redirect_to show_post_path(@post.id)
     else
       render 'edit'
     end
@@ -39,7 +40,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     if @post.destroy
-      flash[:notice] = "Book was successfully created."
+      flash[:notice] = "Book was successfully destroyed."
       redirect_to posts_path
     else
       render 'index'
