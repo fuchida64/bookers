@@ -43,7 +43,7 @@ p, ol, ul, td {
     line-height: 18px;
     margin: 33px;
 }
-#notice {
+.flash {
     color: green;
 }
 th {
@@ -59,12 +59,13 @@ h4 {
     font-weight: bold;
     margin-top: 10px;
 }
+.field, .actions {
+    margin-bottom: 10px;
+}
 .book_title, .book_body {
     display: block;
 }
-.bottun {
-    margin-top: 10px;
-}
+
 .box {
     display: block;
 }

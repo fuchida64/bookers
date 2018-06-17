@@ -1,9 +1,8 @@
-<body>
-  <p id="notice"></p>
 
   <h1>Editing Book</h1>
 
   <%= form_for(@post) do |f| %>
+
 	 <% if @post.errors.any? %>
   		<div id="error_explanation" class="alert alert-danger">
    		 	<ul>
@@ -14,16 +13,22 @@
     		</div>
 	 <% end %>
 
+  <div class="field">
     <p class="edit_text">Title</p>
     <%= f.text_field :title, class: "book_titlle"%>
+  </div>
+
+  <div class="field">
     <p class="edit_text">Body</p>
     <%= f.text_area :body, class: "book_body"%>
-    <div class="bottun"></div>
+  </div>
+
+  <div class="actions">
     <%= f.submit 'Update Book' %>
+  </div>
     <% end %>
 
   <% id ='2' %>
   <%= link_to "Show", post_path(@post.id), class: "show_#{id}"  %>
   <p class="line">|</p>
   <%= link_to "Back", posts_path, class: "back"%>
-</body>

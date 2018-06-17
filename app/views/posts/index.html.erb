@@ -1,5 +1,3 @@
-<body>
-  <p id="notice"></p>
 
   <h1>Books</h1>
 
@@ -36,14 +34,20 @@
       <li><%= message %></li>
     <% end %>
     </ul>
-  </div>
-  <% end %>
+    </div>
+    <% end %>
 
+  <div class="field">
     <h4>Title</h4>
     <%= f.text_field :title, class: "book_titlle" %>
+  </div>
+
+  <div class="field">
     <h4>Body</h4>
-    <%= f.text_area :body %>
-    <div class="bottun"></div>
-    <%= f.submit 'Create Book', class: "book_body"%>
+    <%= f.text_area :body, class: "book_body" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Create Book' %>
+  </div>
   <% end %>
-</body>
